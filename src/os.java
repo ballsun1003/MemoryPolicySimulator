@@ -253,7 +253,7 @@ public class os {
         int[] delays;
         //입력
         String ref = ask(sc, "레퍼런스 스트링: ");
-        String[] timesMs = ask(sc, "각 참조의 페이지 디스크 접근시간 (공백 구분): ").split("\\s+");
+        String[] timesMs = ask(sc, "각 참조의 페이지 디스크 접근시간 (공백 구분, -1 입력시 모두 1): ").split("\\s+");
         if (timesMs[0].equals("-1")) {
             delays = new int[ref.length()];
             java.util.Arrays.fill(delays, 1);
