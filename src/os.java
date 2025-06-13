@@ -350,5 +350,10 @@ public class os {
         System.out.printf("Migrations  : %d%n", migrations);
         System.out.printf("Fault Rate  : %.2f%%%n", rate);
         System.out.printf("총 디스크 I/O 시간 : %d ms%n", ioMs);
+
+        System.out.println("\n[Enter] 키를 누르면 프로그램이 종료됩니다.");
+        try (Scanner wait = new Scanner(System.in)) {
+            wait.nextLine(); // 사용자가 Enter를 칠 때까지 블록
+        }
     }
 }
